@@ -128,13 +128,13 @@ export const addToCart = async (req, res) => {
     const existingItem = user.cart.items.find((item) =>
       item.product.equals(productId)
     );
-
+z
     if (existingItem) {
       existingItem.quantity += quantity;
       existingItem.price = product.price * existingItem.quantity;
     } else {
       user.cart.items.push({
-        product: productId,
+      product: productId,
         quantity,
         price: product.price * quantity,
       });
